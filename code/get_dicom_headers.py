@@ -37,15 +37,7 @@ class dicom_siemens_scan:
             return CsaHeader(raw_csa).read()
         elif self.software_version == "syngo MR XA30":
             print(f"The software version is {self.software_version}. This script is only compatible with syngo MR E11. Sorry")
-            print("Here is the best I can do:")
-            image = Header(self.dicom_data)
-            # keys = image.keys()
-            # print(keys)
-            raw_csa = image.get((0x0021, 0x1026))
-            # (0x0021, 0x1071)
-            # (0x0021, 0x1026)
-            # (0x0021, 0x1019)
-            return raw_csa
+            return None
         else: 
             print("The software version is not compatible with this script. Please check the software version.")
             return None
