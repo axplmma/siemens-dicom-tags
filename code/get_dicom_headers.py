@@ -64,6 +64,6 @@ class dicom_siemens_scan:
         if self.software_version == "syngo MR E11":
             # Save the simplified metadata as a JSON file
             with open(json_filename, 'w') as f:
-                json.dump(self.public_tags, f, indent=4, default=self.convert_to_serializable)
+                json.dump(self.private_tags, f, indent=4, default=self.convert_to_serializable)
         else:
             print("I don't know how to save this data to json yet :(")
