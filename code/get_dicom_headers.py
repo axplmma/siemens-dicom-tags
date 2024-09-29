@@ -1,11 +1,39 @@
 import os
+import ast
 import json
 from pydicom import dcmread
+from  pydicom.valuerep import PersonName
+from pydicom.multival import MultiValue
 from dicom_parser.utils.siemens.csa.header import CsaHeader
 
 class dicom_siemens_scan:
+    """
+    A class to represent siemens dicom metadata.
 
-    def __init__(self, dicom_path):
+    Attributes
+    ----------
+    `dicom_path` : str
+        Path to a dicom file 
+    `filename` : str
+        Name of the dicom file. Extracted from `dicom_path`, without extension. Used to name the corresponding json file.
+    `dicom_data` : FileDataset
+        The dicom headers extracted from the file provided with `dicom_path`
+
+    Methods
+    -------
+    `software_version`
+        Accesses the dicom tag `(0018, 1020)` - which contains the software version
+    `public_tags`
+        Read public (i.e. not CSA & not private) dicom tags
+    `private_tags`
+        Read CSA or private tags (depending on software version)
+    `convert_to_serializable`
+        Read dictionary output of dicom tags and decode if needed
+    `save_json`
+        Save all (private and public) tags as a json file. File has the same as the dicom file and is saved in the same directory. 
+    """
+
+    def __init__(self, dicom_path:str):
         self.dicom_path = dicom_path
         self.filename = os.path.basename(self.dicom_path).split('.')[0]
         self.dicom_data = dcmread(self.dicom_path, stop_before_pixels=True)
@@ -25,7 +53,16 @@ class dicom_siemens_scan:
         Extract the public tags from the Siemens DICOM file.
         i.e. access the information not stored in private or CSA headers
         """
-        return dcmread(self.dicom_path)
+        raw_tags = dcmread(self.dicom_path)
+        public_dict_tags:dict = {}
+        for item in raw_tags:
+            if "CSA" in item.name: continue
+            if item.VR == "SQ":
+                print("this is a sequence")
+            else:
+                public_dict_tags.update({item.name: item.value})
+                # key, value = item.name, item.value
+        return public_dict_tags
     
     @property
     def private_tags(self):
@@ -45,17 +82,29 @@ class dicom_siemens_scan:
             print("The software version is not compatible with this script. Please check the software version.")
             return None
     
-    @classmethod
-    def convert_to_serializable(self, obj):
+    @property 
+    def all_tags(self):
+        """
+        "Public" and private/tags joined into one dictionary, to be exported as a single json file.
+        """
+        return {**self.public_tags, **self.private_tags}
+
+    def convert_to_serializable(self, obj)->dict:
+        """
+        Fix dictionary format of headers to save them in a json file.
+        """
         if isinstance(obj, bytes):
             return obj.decode('utf-8')
+        if isinstance(obj, MultiValue):
+            return list(obj)  # Convert MultiValue to a list
+        if isinstance(obj, PersonName):
+            return str(obj)
         raise TimeoutError(f'Object of type {obj.__class__.__name__} is not JSON serializable!')
     
-    
-    def save_json(self):
+    def save_json(self)->None:
         """
         Save available metadata into json format.
-        Currently works for private tags and syngo MR E11 only 
+        Currently works for syngo MR E11 only 
         """
         # define json filename
         filename = os.path.basename(self.dicom_path).split('.')[0]
@@ -64,6 +113,6 @@ class dicom_siemens_scan:
         if self.software_version == "syngo MR E11":
             # Save the simplified metadata as a JSON file
             with open(json_filename, 'w') as f:
-                json.dump(self.private_tags, f, indent=4, default=self.convert_to_serializable)
+                json.dump(self.all_tags, f, indent=4, default=self.convert_to_serializable)
         else:
             print("I don't know how to save this data to json yet :(")
