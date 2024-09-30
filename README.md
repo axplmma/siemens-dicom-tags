@@ -30,4 +30,5 @@ I don't plan on making this code usable for other file types beyond my PhD proje
 ## Meme
 
 Here is a meme for your enjoyment:
-![meme](https://www.explainxkcd.com/wiki/images/b/bf/fmri_billboard.png)
+
+<img align="left" src="https://www.explainxkcd.com/wiki/images/b/bf/fmri_billboard.png">
