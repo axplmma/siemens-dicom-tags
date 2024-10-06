@@ -58,7 +58,8 @@ class dicom_siemens_scan:
         for item in raw_tags:
             if "CSA" in item.name: continue
             if item.VR == "SQ":
-                print("this is a sequence")
+                # print("this is a sequence")
+                pass
             else:
                 public_dict_tags.update({item.name: item.value})
                 # key, value = item.name, item.value
