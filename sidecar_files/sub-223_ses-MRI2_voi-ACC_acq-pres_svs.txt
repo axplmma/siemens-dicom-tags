@@ -1,0 +1,450 @@
+Dataset.file_meta -------------------------------
+(0002, 0000) File Meta Information Group Length  UL: 174
+(0002, 0001) File Meta Information Version       OB: b'\x00\x01'
+(0002, 0002) Media Storage SOP Class UID         UI: MR Spectroscopy Storage
+(0002, 0003) Media Storage SOP Instance UID      UI: 2.25.256577899615104464943943200131520304722
+(0002, 0010) Transfer Syntax UID                 UI: Explicit VR Little Endian
+(0002, 0012) Implementation Class UID            UI: 1.2.40.0.13.1.1
+(0002, 0013) Implementation Version Name         SH: 'dcm4che-2.0'
+-------------------------------------------------
+(0008, 0005) Specific Character Set              CS: 'ISO_IR 100'
+(0008, 0008) Image Type                          CS: ['ORIGINAL', 'PRIMARY', 'SPECTROSCOPY', 'NONE']
+(0008, 0016) SOP Class UID                       UI: MR Spectroscopy Storage
+(0008, 0018) SOP Instance UID                    UI: 2.25.256577899615104464943943200131520304722
+(0008, 0020) Study Date                          DA: '20240703'
+(0008, 0021) Series Date                         DA: '20240703'
+(0008, 0023) Content Date                        DA: '20240703'
+(0008, 002a) Acquisition DateTime                DT: '20240703133314.540000'
+(0008, 0030) Study Time                          TM: '131848.400000'
+(0008, 0031) Series Time                         TM: '133803.344000'
+(0008, 0033) Content Time                        TM: '133803.348000'
+(0008, 0050) Accession Number                    SH: '2.25.290070988920337595058960832122557831312'
+(0008, 0060) Modality                            CS: 'MR'
+(0008, 0070) Manufacturer                        LO: 'Siemens Healthineers'
+(0008, 1030) Study Description                   LO: '223 Placebo Synaptic_Connectivity'
+(0008, 103e) Series Description                  LO: 'ACC_svs_se_30_noECC'
+(0008, 1050) Performing Physician's Name         PN: 'Synaptic_Connectivity'
+(0008, 1090) Manufacturer's Model Name           LO: 'MAGNETOM Prisma'
+(0008, 9092)  Referenced Image Evidence Sequence  1 item(s) ---- 
+   (0008, 1115)  Referenced Series Sequence  1 item(s) ---- 
+      (0008, 1199)  Referenced SOP Sequence  3 item(s) ---- 
+         (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+         (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000677
+         (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+            (0008, 0100) Code Value                          SH: '121311'
+            (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+            (0008, 0104) Code Meaning                        LO: 'Localizer'
+            ---------
+         ---------
+         (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+         (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000681
+         (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+            (0008, 0100) Code Value                          SH: '121311'
+            (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+            (0008, 0104) Code Meaning                        LO: 'Localizer'
+            ---------
+         ---------
+         (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+         (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000685
+         (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+            (0008, 0100) Code Value                          SH: '121311'
+            (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+            (0008, 0104) Code Meaning                        LO: 'Localizer'
+            ---------
+         ---------
+      (0020, 000e) Series Instance UID                 UI: ''
+      ---------
+   (0020, 000d) Study Instance UID                  UI: ''
+   ---------
+(0008, 9206) Volumetric Properties               CS: 'DISTORTED'
+(0008, 9207) Volume Based Calculation Technique  CS: 'NONE'
+(0008, 9208) Complex Image Component             CS: 'COMPLEX'
+(0008, 9209) Acquisition Contrast                CS: ''
+(0009, 0010) Private Creator                     LO: 'SIEMENS SYNGO INDEX SERVICE'
+(0009, 108c) Private tag data                    LO: ''
+(0010, 0010) Patient's Name                      PN: '223'
+(0010, 0020) Patient ID                          LO: '223_Placebo'
+(0010, 0040) Patient's Sex                       CS: 'M'
+(0010, 1010) Patient's Age                       AS: '056Y'
+(0010, 1020) Patient's Size                      DS: '1.778'
+(0010, 1030) Patient's Weight                    DS: '77.0'
+(0012, 0063) De-identification Method            LO: 'RSU XNAT Migration Anonymisation'
+(0012, 0064)  De-identification Method Code Sequence  2 item(s) ---- 
+   (0008, 0100) Code Value                          SH: '391'
+   (0008, 0102) Coding Scheme Designator            SH: 'XNAT'
+   (0008, 0103) Coding Scheme Version               SH: '1.0'
+   (0008, 0104) Code Meaning                        LO: 'XNAT DicomEdit 4 Script'
+   ---------
+   (0008, 0100) Code Value                          SH: '391'
+   (0008, 0102) Coding Scheme Designator            SH: 'XNAT'
+   (0008, 0103) Coding Scheme Version               SH: '1.0'
+   (0008, 0104) Code Meaning                        LO: 'XNAT DicomEdit 4 Script'
+   ---------
+(0018, 0015) Body Part Examined                  CS: 'HEAD'
+(0018, 0087) Magnetic Field Strength             DS: '3.0'
+(0018, 1000) Device Serial Number                LO: '166001'
+(0018, 1020) Software Versions                   LO: 'syngo MR XA30'
+(0018, 1030) Protocol Name                       LO: 'ACC_svs_se_30'
+(0018, 1050) Spatial Resolution                  DS: '1.0'
+(0018, 1200) Date of Last Calibration            DA: '20090304'
+(0018, 1201) Time of Last Calibration            TM: '123723'
+(0018, 1320) B1rms                               FL: 0.47424283623695374
+(0018, 5100) Patient Position                    CS: 'HFS'
+(0018, 9004) Content Qualification               CS: 'PRODUCT'
+(0018, 9005) Pulse Sequence Name                 SH: '*svs_se'
+(0018, 9008) Echo Pulse Sequence                 CS: 'SPIN'
+(0018, 9011) Multiple Spin Echo                  CS: 'NO'
+(0018, 9012) Multi-planar Excitation             CS: 'NO'
+(0018, 9017) Steady State Pulse Sequence         CS: 'NONE'
+(0018, 9018) Echo Planar Pulse Sequence          CS: 'NO'
+(0018, 9025) Spectrally Selected Suppression     CS: 'NONE'
+(0018, 9032) Geometry of k-Space Traversal       CS: 'RECTILINEAR'
+(0018, 9033) Segmented k-Space Traversal         CS: 'SINGLE'
+(0018, 9034) Rectilinear Phase Encode Reordering CS: 'LINEAR'
+(0018, 9052) Spectral Width                      FD: 2500.0
+(0018, 9053) Chemical Shift Reference            FD: 4.7
+(0018, 9054) Volume Localization Technique       CS: 'PRESS'
+(0018, 9059) De-coupling                         CS: 'NO'
+(0018, 9064) k-space Filtering                   CS: 'NONE'
+(0018, 9065) Time Domain Filtering               CS: 'NONE'
+(0018, 9066) Number of Zero Fills                US: 0
+(0018, 9067) Baseline Correction                 CS: 'NONE'
+(0018, 9073) Acquisition Duration                FD: 288.0
+(0018, 9093) Number of k-Space Trajectories      US: 96
+(0018, 9098) Transmitter Frequency               FD: 123.256321
+(0018, 9100) Resonant Nucleus                    CS: '1H'
+(0018, 9101) Frequency Correction                CS: 'NO'
+(0018, 9126)  Volume Localization Sequence  3 item(s) ---- 
+   (0018, 9104) Slab Thickness                      FD: 20.0
+   (0018, 9105) Slab Orientation                    FD: [0.007175, -0.065477, 0.997828]
+   (0018, 9106) Mid Slab Position                   FD: [8.18342226878, -87.9108657831, 12.579466939500001]
+   ---------
+   (0018, 9104) Slab Thickness                      FD: 20.0
+   (0018, 9105) Slab Orientation                    FD: [-0.13428222036868384, 0.9887529712146608, 0.06584707307007583]
+   (0018, 9106) Mid Slab Position                   FD: [8.18342226878, -87.9108657831, 12.579466939500001]
+   ---------
+   (0018, 9104) Slab Thickness                      FD: 20.0
+   (0018, 9105) Slab Orientation                    FD: [-0.9909168685645919, -0.13446301213532086, -0.00169809437461512]
+   (0018, 9106) Mid Slab Position                   FD: [8.18342226878, -87.9108657831, 12.579466939500001]
+   ---------
+(0018, 9174) Applicable Safety Standard Agency   CS: 'IEC'
+(0018, 9198) First Order Phase Correction        CS: 'NO'
+(0018, 9199) Water Referenced Phase Correction   CS: 'NO'
+(0018, 9200) MR Spectroscopy Acquisition Type    CS: 'SINGLE_VOXEL'
+(0020, 000d) Study Instance UID                  UI: 2.25.32491572345396840739318711101525313657
+(0020, 000e) Series Instance UID                 UI: 2.25.281001225998221136498368569177969505290
+(0020, 0011) Series Number                       IS: '20'
+(0020, 0012) Acquisition Number                  IS: '1'
+(0020, 0013) Instance Number                     IS: '1'
+(0020, 0052) Frame of Reference UID              UI: 2.25.183037375415414858825769564518733185486
+(0020, 1040) Position Reference Indicator        LO: ''
+(0020, 9221)  Dimension Organization Sequence  1 item(s) ---- 
+   (0020, 9164) Dimension Organization UID          UI: 1.3.12.2.1107.5.2.43.166001.2024070313380333732403966
+   ---------
+(0020, 9222)  Dimension Index Sequence  3 item(s) ---- 
+   (0020, 9164) Dimension Organization UID          UI: 1.3.12.2.1107.5.2.43.166001.2024070313380333732403966
+   (0020, 9165) Dimension Index Pointer             AT: (0020, 9056)
+   (0020, 9167) Functional Group Pointer            AT: (0020, 9111)
+   ---------
+   (0020, 9164) Dimension Organization UID          UI: 1.3.12.2.1107.5.2.43.166001.2024070313380333732403966
+   (0020, 9165) Dimension Index Pointer             AT: (0020, 9057)
+   (0020, 9167) Functional Group Pointer            AT: (0020, 9111)
+   ---------
+   (0020, 9164) Dimension Organization UID          UI: 1.3.12.2.1107.5.2.43.166001.2024070313380333732403966
+   (0020, 9165) Dimension Index Pointer             AT: (0020, 9128)
+   (0020, 9167) Functional Group Pointer            AT: (0020, 9111)
+   ---------
+(0021, 0010) Private Creator                     LO: 'SIEMENS MR MRS 05'
+(0021, 0011) Private Creator                     LO: 'SIEMENS MR SDR 01'
+(0021, 1001) Private tag data                    FD: 300.509765625
+(0021, 1101) Private tag data                    LO: 'ACQUISITION'
+(0021, 1102) Private tag data                    LO: 'ACQUISITION'
+(0028, 0008) Number of Frames                    IS: '1'
+(0028, 0010) Rows                                US: 1
+(0028, 0011) Columns                             US: 1
+(0028, 9001) Data Point Rows                     UL: 1
+(0028, 9002) Data Point Columns                  UL: 2048
+(0028, 9003) Signal Domain Columns               CS: 'TIME'
+(0028, 9108) Data Representation                 CS: 'COMPLEX'
+(0040, 0244) Performed Procedure Step Start Date DA: '20240703'
+(0040, 0245) Performed Procedure Step Start Time TM: '131848.400000'
+(0040, 0250) Performed Procedure Step End Date   DA: '20240703'
+(0040, 0253) Performed Procedure Step ID         SH: 'USa47e067974314b'
+(0040, 0254) Performed Procedure Step Descriptio LO: '223 Placebo Synaptic_Connectivity'
+(0040, 0555)  Acquisition Context Sequence  0 item(s) ---- 
+(0040, 2004) Issue Date of Imaging Service Reque DA: '20240703'
+(5200, 9229)  Shared Functional Groups Sequence  1 item(s) ---- 
+   (0008, 1140)  Referenced Image Sequence  3 item(s) ---- 
+      (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+      (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000677
+      (0008, 1160) Referenced Frame Number             IS: '91'
+      (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+         (0008, 0100) Code Value                          SH: '121311'
+         (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+         (0008, 0104) Code Meaning                        LO: 'Localizer'
+         ---------
+      ---------
+      (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+      (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000681
+      (0008, 1160) Referenced Frame Number             IS: '72'
+      (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+         (0008, 0100) Code Value                          SH: '121311'
+         (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+         (0008, 0104) Code Meaning                        LO: 'Localizer'
+         ---------
+      ---------
+      (0008, 1150) Referenced SOP Class UID            UI: Enhanced MR Image Storage
+      (0008, 1155) Referenced SOP Instance UID         UI: 1.3.12.2.1107.5.2.43.166001.30000024070308391872900000685
+      (0008, 1160) Referenced Frame Number             IS: '50'
+      (0040, a170)  Purpose of Reference Code Sequence  1 item(s) ---- 
+         (0008, 0100) Code Value                          SH: '121311'
+         (0008, 0102) Coding Scheme Designator            SH: 'DCM'
+         (0008, 0104) Code Meaning                        LO: 'Localizer'
+         ---------
+      ---------
+   (0018, 9042)  MR Receive Coil Sequence  1 item(s) ---- 
+      (0018, 1250) Receive Coil Name                   SH: 'HeadNeck_20'
+      (0018, 9041) Receive Coil Manufacturer Name      LO: 'NN'
+      (0018, 9043) Receive Coil Type                   CS: 'MULTICOIL'
+      (0018, 9044) Quadrature Receive Coil             CS: 'NO'
+      (0018, 9045)  Multi-Coil Definition Sequence  16 item(s) ---- 
+         (0018, 9047) Multi-Coil Element Name             SH: 'H31'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H32'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H33'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H34'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H41'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H42'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H43'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H44'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H11'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H12'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H13'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H14'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H21'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H22'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H23'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+         (0018, 9047) Multi-Coil Element Name             SH: 'H24'
+         (0018, 9048) Multi-Coil Element Used             CS: 'YES'
+         ---------
+      ---------
+   (0018, 9049)  MR Transmit Coil Sequence  1 item(s) ---- 
+      (0018, 1251) Transmit Coil Name                  SH: 'Body'
+      (0018, 9050) Transmit Coil Manufacturer Name     LO: 'Siemens'
+      (0018, 9051) Transmit Coil Type                  CS: 'BODY'
+      ---------
+   (0018, 9103)  MR Spectroscopy FOV/Geometry Sequence  1 item(s) ---- 
+      (0018, 0093) Percent Sampling                    DS: '100.0'
+      (0018, 0094) Percent Phase Field of View         DS: '100.0'
+      (0018, 9095) Spectroscopy Acquisition Phase Rows UL: 1
+      (0018, 9127) Spectroscopy Acquisition Data Colum UL: 2048
+      (0018, 9159) Spectroscopy Acquisition Out-of-pla UL: 1
+      (0018, 9234) Spectroscopy Acquisition Phase Colu UL: 1
+      ---------
+   (0018, 9112)  MR Timing and Related Parameters Sequence  1 item(s) ---- 
+      (0018, 0080) Repetition Time                     DS: '3000.0'
+      (0018, 0091) Echo Train Length                   IS: '1'
+      (0018, 1314) Flip Angle                          DS: '90.0'
+      (0018, 9176)  Operating Mode Sequence  2 item(s) ---- 
+         (0018, 9177) Operating Mode Type                 CS: 'GRADIENT'
+         (0018, 9178) Operating Mode                      CS: 'IEC_FIRST_LEVEL'
+         ---------
+         (0018, 9177) Operating Mode Type                 CS: 'RF'
+         (0018, 9178) Operating Mode                      CS: 'IEC_NORMAL'
+         ---------
+      (0018, 9180) Gradient Output Type                CS: 'PER_NERVE_STIM'
+      (0018, 9182) Gradient Output                     FD: 0.4214503765106201
+      (0018, 9239)  Specific Absorption Rate Sequence  6 item(s) ---- 
+         (0018, 9179) Specific Absorption Rate Definition CS: 'IEC_WHOLE_BODY'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.024926367239393492
+         ---------
+         (0018, 9179) Specific Absorption Rate Definition CS: 'IEC_PARTIAL_BODY'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.1439796382502824
+         ---------
+         (0018, 9179) Specific Absorption Rate Definition CS: 'IEC_HEAD'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.1321772665478094
+         ---------
+         (0018, 9179) Specific Absorption Rate Definition CS: 'IEC_LOCAL'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.4130539579619044
+         ---------
+         (0018, 9179) Specific Absorption Rate Definition CS: 'SMR_B1RMS'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.47424284393682914
+         ---------
+         (0018, 9179) Specific Absorption Rate Definition CS: 'SMR_BORELOCAL'
+         (0018, 9181) Specific Absorption Rate Value      FD: 0.18948492027457783
+         ---------
+      (0018, 9240) RF Echo Train Length                US: None
+      (0018, 9241) Gradient Echo Train Length          US: 1
+      ---------
+   (0018, 9114)  MR Echo Sequence  1 item(s) ---- 
+      (0018, 9082) Effective Echo Time                 FD: 30.0
+      ---------
+   (0018, 9115)  MR Modifier Sequence  1 item(s) ---- 
+      (0018, 9009) Inversion Recovery                  CS: 'NO'
+      (0018, 9010) Flow Compensation                   CS: 'NONE'
+      (0018, 9021) T2 Preparation                      CS: 'YES'
+      (0018, 9026) Spectrally Selected Excitation      CS: 'NONE'
+      (0018, 9027) Spatial Pre-saturation              CS: 'NONE'
+      (0018, 9077) Parallel Acquisition                CS: 'NO'
+      (0018, 9081) Partial Fourier                     CS: 'NO'
+      ---------
+   (0018, 9119)  MR Averages Sequence  1 item(s) ---- 
+      (0018, 0083) Number of Averages                  DS: '96.0'
+      ---------
+   (0018, 9227)  MR Spectroscopy Frame Type Sequence  1 item(s) ---- 
+      (0008, 9007) Frame Type                          CS: ['ORIGINAL', 'PRIMARY', 'SPECTROSCOPY', 'NONE']
+      (0008, 9206) Volumetric Properties               CS: 'DISTORTED'
+      (0008, 9207) Volume Based Calculation Technique  CS: 'NONE'
+      (0008, 9208) Complex Image Component             CS: 'COMPLEX'
+      (0008, 9209) Acquisition Contrast                CS: 'UNKNOWN'
+      ---------
+   (0020, 9071)  Frame Anatomy Sequence  1 item(s) ---- 
+      (0008, 2218)  Anatomic Region Sequence  1 item(s) ---- 
+         (0008, 0100) Code Value                          SH: 'T-D1100'
+         (0008, 0102) Coding Scheme Designator            SH: 'SRT'
+         (0008, 0104) Code Meaning                        LO: 'Head'
+         ---------
+      (0020, 9072) Frame Laterality                    CS: 'U'
+      ---------
+   (0021, 0010) Private Creator                     LO: 'SIEMENS MR SDS 01'
+   (0021, 10fe)  Private tag data  1 item(s) ---- 
+      (0021, 0010) Private Creator                     LO: 'SIEMENS MR SDS 01'
+      (0021, 1001) Private tag data                    IS: '77'
+      (0021, 1004) Private tag data                    DS: '1.0'
+      (0021, 1005) Private tag data                    IS: [0, 0, 43]
+      (0021, 1006) Private tag data                    LO: 'void'
+      (0021, 1008) Private tag data                    SH: 'Fast'
+      (0021, 100a) Private tag data                    DS: '1.0'
+      (0021, 100c) Private tag data                    SH: '+LPH'
+      (0021, 100d) Private tag data                    US: 0
+      (0021, 100f) Private tag data                    DS: [31.1914, 16.9797, 26.8349]
+      (0021, 1010) Private tag data                    IS: '63010001'
+      (0021, 1011) Private tag data                    DS: '0.0'
+      (0021, 1012) Private tag data                    FD: 2.0
+      (0021, 1013) Private tag data                    DS: '0.0'
+      (0021, 1014) Private tag data                    IS: '0'
+      (0021, 1016) Private tag data                    DS: '0.0'
+      (0021, 1017) Private tag data                    DS: '0.0'
+      (0021, 1018) Private tag data                    SH: 'Head'
+      (0021, 1019) Private tag data                    OB: Array of 91854 elements
+      (0021, 101b) Private tag data                    DS: '0.01'
+      (0021, 101c) Private tag data                    DS: [8.04121, 3.67154, 6.81013]
+      (0021, 101d) Private tag data                    IS: '2'
+      (0021, 1022) Private tag data                    SH: 'SIEMENS'
+      (0021, 1023) Private tag data                    IS: '0'
+      (0021, 1025) Private tag data                    SL: [0, 0, -1270]
+      (0021, 1026) Private tag data                    IS: Array of 38 elements
+      (0021, 1027) Private tag data                    US: 1
+      (0021, 102a) Private tag data                    IS: [255, 0, 0, 0, 0, 4868, 4867, 0, 0, 0, 0]
+      (0021, 102b) Private tag data                    ST: '1;HFS;77;;;0;2;-1382882642'
+      (0021, 102c) Private tag data                    DS: [14400, 43.5459, 43.5459]
+      (0021, 102d) Private tag data                    DS: [3.2, 0.132177, 0]
+      (0021, 102e) Private tag data                    IS: '2'
+      (0021, 102f) Private tag data                    DS: [35, 35, 30]
+      (0021, 1030) Private tag data                    DS: '0.0'
+      (0021, 1031) Private tag data                    IS: '-1227'
+      (0021, 1032) Private tag data                    SS: 0
+      (0021, 1033) Private tag data                    SH: 'AS82'
+      (0021, 1034) Private tag data                    DS: '1.0'
+      (0021, 1035) Private tag data                    DS: '0.42145'
+      (0021, 1036) Private tag data                    DS: '0.0'
+      (0021, 1037) Private tag data                    SH: 'No'
+      (0021, 1038) Private tag data                    DS: '300.51'
+      (0021, 103b) Private tag data                    DS: '0.0'
+      (0021, 103d) Private tag data                    CS: 'NONE'
+      (0021, 1044) Private tag data                    DS: [100, 0.474243]
+      (0021, 1045) Private tag data                    CS: 'YES'
+      (0021, 1046) Private tag data                    DS: '1616.86'
+      (0021, 1047) Private tag data                    CS: 'IEC'
+      (0021, 1050) Private tag data                    US: 1
+      (0021, 1051) Private tag data                    US: 0
+      (0021, 1053) Private tag data                    CS: 'U'
+      (0021, 105a) Private tag data                    CS: 'RM'
+      (0021, 105b) Private tag data                    CS: 'SP'
+      (0021, 105c) Private tag data                    CS: 'WS'
+      (0021, 105d) Private tag data                    SL: 43
+      (0021, 105e) Private tag data                    LO: 'FoV 20*20'
+      (0021, 105f) Private tag data                    SH: 'TP H43'
+      (0021, 1060) Private tag data                    DT: '20240703133244.779212'
+      (0021, 1061) Private tag data                    SH: '0'
+      (0021, 1062) Private tag data                    FL: [622.1909790039062, 622.1909790039062, 471.85400390625, 606.3510131835938, 606.3510131835938, 17.586000442504883, 16.441999435424805, 31.70199966430664]
+      ---------
+   (0028, 9110)  Pixel Measures Sequence  1 item(s) ---- 
+      (0018, 0050) Slice Thickness                     DS: '20.0'
+      (0028, 0030) Pixel Spacing                       DS: [20, 20]
+      ---------
+   ---------
+(5200, 9230)  Per-frame Functional Groups Sequence  1 item(s) ---- 
+   (0020, 9111)  Frame Content Sequence  1 item(s) ---- 
+      (0018, 9074) Frame Acquisition DateTime          DT: '20240703133314.540000'
+      (0018, 9151) Frame Reference DateTime            DT: '20240703133314.540000'
+      (0018, 9220) Frame Acquisition Duration          FD: 288000.0
+      (0020, 9056) Stack ID                            SH: '1'
+      (0020, 9057) In-Stack Position Number            UL: 1
+      (0020, 9128) Temporal Position Index             UL: 2
+      (0020, 9156) Frame Acquisition Number            US: 1
+      (0020, 9157) Dimension Index Values              UL: [1, 1, 2]
+      ---------
+   (0020, 9113)  Plane Position Sequence  1 item(s) ---- 
+      (0020, 0032) Image Position (Patient)            DS: [8.18342, -87.9109, 12.5795]
+      ---------
+   (0020, 9116)  Plane Orientation Sequence  1 item(s) ---- 
+      (0020, 0037) Image Orientation (Patient)         DS: [-0.990917, -0.134463, -0.00169809, -0.134282, 0.988753, 0.0658471]
+      ---------
+   (0021, 0010) Private Creator                     LO: 'SIEMENS MR SDI 02'
+   (0021, 10fe)  Private tag data  1 item(s) ---- 
+      (0021, 0010) Private Creator                     LO: 'SIEMENS MR SDI 02'
+      (0021, 1003) Private tag data                    DS: '288000.0'
+      (0021, 1004) Private tag data                    DS: '18.0'
+      (0021, 1006) Private tag data                    LO: 'X_1_2_1_1_1_1_1_1_1_1_1_31'
+      (0021, 101a) Private tag data                    SH: 'measured'
+      (0021, 1024) Private tag data                    IS: '0'
+      (0021, 1033) Private tag data                    IS: '0'
+      (0021, 1041) Private tag data                    SH: 'measured'
+      (0021, 1042) Private tag data                    IS: '400000'
+      (0021, 1045) Private tag data                    SL: [0, 0, -1227]
+      (0021, 1048) Private tag data                    IS: '32'
+      (0021, 1049) Private tag data                    IS: '0'
+      (0021, 104f) Private tag data                    LO: 'HE1-4'
+      (0021, 1051) Private tag data                    UL: 134217728
+      (0021, 1058) Private tag data                    SH: '1*1'
+      (0021, 1059) Private tag data                    IS: [0, 0, 43]
+      (0021, 105b) Private tag data                    FD: [8.18342226878, -87.9108657831, -30.4205330605]
+      (0021, 105e) Private tag data                    IS: '0'
+      (0021, 1071) Private tag data                    UT: 'XXXXXXXXXXXXXXXX'
+      (0021, 1075) Private tag data                    CS: ['ORIGINAL', 'PRIMARY', 'SPECTROSCOPY']
+      (0021, 1088) Private tag data                    DS: '18.367'
+      (0021, 108a) Private tag data                    IS: '1'
+      (0021, 108e) Private tag data                    ST: 'X_1_2_1_1_1_1_1_1_1_1_1_31_1_1_2_1_1_1_1_1_1_1'
+      ---------
+   ---------
+(5600, 0020) Spectroscopy Data                   OF: Array of 16384 elements
