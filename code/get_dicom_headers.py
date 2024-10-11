@@ -1,12 +1,11 @@
 import os
-import ast
 import json
 from pydicom import dcmread
-from  pydicom.valuerep import PersonName
+from pydicom.valuerep import PersonName
 from pydicom.multival import MultiValue
 from dicom_parser.utils.siemens.csa.header import CsaHeader
 
-class dicom_siemens_scan:
+class DicomSiemensScan:
     """
     A class to represent siemens dicom metadata.
 
@@ -57,14 +56,11 @@ class dicom_siemens_scan:
         public_dict_tags:dict = {}
         for item in raw_tags:
             if "CSA" in item.name: continue
-            if item.VR == "SQ":
-                # print("this is a sequence")
-                pass
+            if item.VR in ["SQ", "OF"]: continue
             else:
                 public_dict_tags.update({item.name: item.value})
-                # key, value = item.name, item.value
         return public_dict_tags
-    
+
     @property
     def private_tags(self):
         """
@@ -77,9 +73,15 @@ class dicom_siemens_scan:
             tags_as_dict = {key: val['value'] for key, val in raw_tags.items()}
             return tags_as_dict
         elif self.software_version == "syngo MR XA30":
-            print(f"The software version is {self.software_version}. This script is only compatible with syngo MR E11. Sorry")
-            return None
-        else: 
+            private_dict_tags:dict = {}
+            for item in self.dicom_data:
+                if "CSA" in item.name: continue
+                if item.VR in ["SQ", "OF"]: continue
+                else:
+                    private_dict_tags.update({item.name: item.value})
+                    # //private_dict_tags.update({item.name: self.get_parseable_value(item)})
+            return private_dict_tags
+        else:
             print("The software version is not compatible with this script. Please check the software version.")
             return None
     
@@ -90,7 +92,8 @@ class dicom_siemens_scan:
         """
         return {**self.public_tags, **self.private_tags}
 
-    def convert_to_serializable(self, obj)->dict:
+    @staticmethod
+    def convert_to_serializable(obj):
         """
         Fix dictionary format of headers to save them in a json file.
         """
@@ -100,20 +103,15 @@ class dicom_siemens_scan:
             return list(obj)  # Convert MultiValue to a list
         if isinstance(obj, PersonName):
             return str(obj)
-        raise TimeoutError(f'Object of type {obj.__class__.__name__} is not JSON serializable!')
-    
-    def save_json(self)->None:
+        return obj
+
+    def save_json(self, folder)->None:
         """
         Save available metadata into json format.
         Currently works for syngo MR E11 only 
         """
         # define json filename
-        filename = os.path.basename(self.dicom_path).split('.')[0]
-        # print(self.filename)
-        json_filename = 'sidecar_files/{}.json'.format(filename)
-        if self.software_version == "syngo MR E11":
-            # Save the simplified metadata as a JSON file
-            with open(json_filename, 'w') as f:
-                json.dump(self.all_tags, f, indent=4, default=self.convert_to_serializable)
-        else:
-            print("I don't know how to save this data to json yet :(")
+        json_filename = '{}/{}.json'.format(folder, self.filename)
+        with open(json_filename, 'w') as f:
+            json.dump(self.all_tags, f, indent=4, default=self.convert_to_serializable)
+
